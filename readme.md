@@ -93,7 +93,7 @@ This project is a simple social networking web application that allows users to 
 - Enhance the UI with better design frameworks like Bootstrap or Tailwind CSS.
 
 ## License
-This project is open-source and creates as part of CS50W project
+This project is open-source and created as part of CS50W project
 
 ## Author
 Abishek Bhandari
