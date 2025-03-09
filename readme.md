@@ -47,8 +47,8 @@ This project is a simple social networking web application that allows users to 
 ### Steps to Run the Project
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/your-repository.git
-   cd social-network
+   git clone https://github.com/AbishekBhandari/social-network-application.git
+   cd social-network-application
    ```
 
 2. **Create a Virtual Environment:**
@@ -64,6 +64,7 @@ This project is a simple social networking web application that allows users to 
 
 4. **Run Migrations:**
    ```sh
+   python manage.py makemigrations network
    python manage.py migrate
    ```
 
@@ -92,7 +93,7 @@ This project is a simple social networking web application that allows users to 
 - Enhance the UI with better design frameworks like Bootstrap or Tailwind CSS.
 
 ## License
-This project is open-source and free to use under the MIT License.
+This project is open-source and creates as part of CS50W project
 
 ## Author
 Abishek Bhandari
