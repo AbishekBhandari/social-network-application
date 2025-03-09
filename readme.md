@@ -80,25 +80,6 @@ This project is a simple social networking web application that allows users to 
 7. **Access the Application:**
    Open a web browser and go to `http://127.0.0.1:8000/`.
 
-## Project Structure
-```
-/social-network
-│── network/            # Main Django app
-│   ├── templates/      # HTML templates
-│   ├── static/         # CSS, JavaScript files
-│   ├── models.py       # Database models
-│   ├── views.py        # Django views (business logic)
-│   ├── urls.py         # URL routes
-│   ├── forms.py        # Django forms (if used)
-│   ├── static/network/
-│   │   ├── styles.css  # Custom CSS
-│   │   ├── script.js   # JavaScript for interactivity
-│── db.sqlite3          # SQLite database (default)
-│── manage.py           # Django management script
-│── requirements.txt    # Python dependencies
-│── README.md           # Documentation
-```
-
 ## Technologies Used
 - **Backend:** Django (Python)
 - **Frontend:** HTML, CSS, JavaScript
