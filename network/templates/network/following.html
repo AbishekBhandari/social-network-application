@@ -1,0 +1,45 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'network/script.js' %}">
+    </script>
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="container">
+        <h1 class="title">📢 Your Feed</h1>
+
+        <div class="all-posts">
+            {% for post in posts %}
+            <div class="post card">
+                <h5 class="username"><a href="{% url 'profile' user_id=post.user.id%}">👤 <strong>{{ post.user }}</strong></a></h5>
+                <h6 class="content">{{ post.content }}</h6>
+                <p class="date">📅 {{ post.date }}</p>
+                <p id="likecount_{{post.id}}">{{post.like_count}} Like</p>
+                {% if user.is_authenticated %}
+                    {% if post.id in whoYouLiked %}
+                        <button class="btn btn-info fa fa-thumbs-down col-1" id="{{post.id}}" onclick="toggleLike('{{post.id}}')"></button>
+                    {% else %}
+                        <button class="btn btn-info fa fa-thumbs-up col-1" id="{{post.id}}" onclick="toggleLike('{{post.id}}')"></button>
+                    {% endif %}
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if posts.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">← Previous</a></li>
+                {% endif %}
+                {% if posts.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">Next →</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+  
+{% endblock %}
